@@ -70,6 +70,11 @@ class BaseScraper(ABC):
                     "--no-sandbox",
                     "--disable-dev-shm-usage",
                     "--disable-web-security",
+                    "--disable-gpu",
+                    "--single-process",
+                    "--no-zygote",
+                    "--js-flags=--max-old-space-size=128",
+                    "--disable-software-rasterizer"
                 ]
             )
             self._context = await self._browser.new_context(
