@@ -7,7 +7,7 @@ export default defineConfig({
     port: 5173,
     proxy: {
       '/api': {
-        target: 'http://localhost:8000',
+        target: 'https://crawler-xij6.onrender.com/api',
         changeOrigin: true,
       },
     },
