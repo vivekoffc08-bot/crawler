@@ -5,7 +5,7 @@
  * Set VITE_API_BASE in .env for production (e.g. https://jobhunt-api.onrender.com/api)
  */
 
-const API_BASE = import.meta.env.VITE_API_BASE || "http://localhost:8000/api";
+const API_BASE = import.meta.env.VITE_API_BASE || "https://crawler-xij6.onrender.com/api";
 
 /**
  * Search for jobs (standard POST — waits for all results).
