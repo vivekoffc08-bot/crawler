@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: jobhunt-api
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    region: singapore  # closest to India
+    plan: starter      # $7/mo — 512MB RAM, enough for Playwright
+    envVars:
+      - key: PYTHON_ENV
+        value: production
+      - key: ALLOWED_ORIGINS
+        value: https://your-frontend-domain.vercel.app
+    healthCheckPath: /health
+    autoDeploy: true
